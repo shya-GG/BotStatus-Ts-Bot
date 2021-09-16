@@ -21,7 +21,7 @@ def main():
     with user_client:
         while True:
             print("[INFO] starting to check uptime..")
-            edit_text = f"🔰𝐓𝐄𝐂𝐇𝐒𝐇𝐘𝐀'𝐬 𝐁𝐨𝐭𝐬 𝐒𝐭𝐚𝐭𝐮𝐬🔰\n\n__( All bots are checked automatically per hour if any correction report it )__\n\n\n"
+            edit_text = f"⚙️𝐓𝐄𝐂𝐇𝐒𝐇𝐘𝐀'𝐬 𝐁𝐨𝐭𝐬 𝐒𝐭𝐚𝐭𝐮𝐬🤖\n\n__( All bots are checked automatically per 3 hours; If there are any errors report them )__\n\n\n"
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
                 snt = user_client.send_message(bot, '/start')
@@ -48,9 +48,9 @@ def main():
                 user_client.edit_message_text(int(update_channel), status_message_id,
                                          edit_text)
                 time.sleep(5)
-            print(f"[INFO] everything done! sleeping for 1 hour...")
+            print(f"[INFO] everything done! sleeping for 3 hour...")
 
-            time.sleep(60 * 60)
+            time.sleep(3 * 60 * 60)
 
 
 if __name__ == "__main__":
