@@ -16,7 +16,6 @@ api_id = int(os.environ.get("api_id"))
 api_hash = os.environ.get("api_hash")
 user_client = Client(session_name=str(user_session_string), api_id=api_id, api_hash=api_hash)
 
-
 def main():
     with user_client:
         while True:
